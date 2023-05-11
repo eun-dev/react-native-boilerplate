@@ -8,4 +8,3 @@ declare module "styled-components" {
     accentColor: string;
   }
 }
-

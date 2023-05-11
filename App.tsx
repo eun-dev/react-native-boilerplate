@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Text, View } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
+import RootNavigator from "./src/navigation/RootNavigator";
 
 SplashScreen.preventAutoHideAsync();
 
-export default function App() {
+const App = () => {
   const [ready, setReady] = useState<boolean>(false);
 
   const prepare = async () => {
@@ -24,9 +24,7 @@ export default function App() {
     }
   }, [ready]);
 
-  return (
-    <View>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
-  );
-}
+  return <RootNavigator />;
+};
+
+export default App;
